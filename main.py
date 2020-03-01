@@ -33,6 +33,9 @@ if __name__ == '__main__':
 	if default_args["PAGE_SIZE"]==None:
 		raise Exception('ya got to specify page size!!!')
 
+	if default_args["NUM_PAGE"]==None:
+		print('ya didn\'t told me about the Number of Page you want, I am gonna get all of...' )
+
 
 
 

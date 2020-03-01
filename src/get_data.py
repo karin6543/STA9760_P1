@@ -16,7 +16,7 @@ def get_data1(app_key:str,page_size:int,num_pages=None):
 	else:
 		count=0
 	
-		while num_pages!=total_len:
+		while count<total_len:
 			try:
 				list.append(client.get("nc67-uf89",limit=page_size,offset=counter*page_size))
 				count=count+1
