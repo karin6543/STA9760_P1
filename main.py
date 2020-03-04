@@ -43,41 +43,44 @@ if __name__ == '__main__':
 
 
 	raw_data=get_data1(default_args["APP_KEY"],default_args["PAGE_SIZE"],default_args["NUM_PAGE"])
+	print(raw_data)
+
 
 	push_data(raw_data)
 
 
-import urllib3
-import json
-from bs4 import BeautifulSoup
-# =================================
-# Store some data
+# import urllib3
+# import json
+# from bs4 import BeautifulSoup
+# # =================================
+# # Store some data
 
-http = urllib3.PoolManager()
+# http = urllib3.PoolManager()
 # url = 'http://localhost:9200'
-# data = {
+
+# header = {
 #     'county': 'NY'
 #     }
 # # have to send the data as JSON
-# data = json.dumps(data)
+# header = json.dumps(header)
 
 
-# req =http.request('GET',url)
+# req =http.request('GET',url,header)
 # # out = urllib3.urlopen(req)
 # print(req.data)
 
 # # =================================
 # # Query the resulting "table"
 
-url = 'http://localhost:9200/_search?q=count:NY'
-req = http.request('GET',url)
-# out = http.request('GET',req)
-data = BeautifulSoup(req.data)
-print(req)
-# returned data is JSON
-# data = json.loads(data)
-# total number of results
-print(data)
+# url = 'http://localhost:9200/_search?q=count:NY'
+# req = http.request('GET',url)
+# # out = http.request('GET',req)
+# data = BeautifulSoup(req.data)
+# print(req)
+# # returned data is JSON
+# # data = json.loads(data)
+# # total number of results
+# print(data)
 
 	
 
