@@ -22,7 +22,7 @@ def push_data(data):
 				item['reduction_amount']=float(item['reduction_amount'])
 				item['payment_amount']=float(item['payment_amount'])
 				item['amount_due']=float(item['amount_due'])
-				print(item)
+				# print(item)
 		# print(item.keys())
 				res = es.index(index="test-index", doc_type='tweet', id=count, body=item)
 		
