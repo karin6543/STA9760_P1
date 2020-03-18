@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
 
 
-	# APP_KEY=os.environ['APP_KEY']
+	APP_KEY=os.environ['APP_KEY']
 
 
 	default_args = {
