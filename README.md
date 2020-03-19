@@ -6,7 +6,7 @@
 <br />2. Upload data to Elasticsearch
 <br />3. Create Data Visualizations by utilizing Kibana,the visualizaiton dashboard in Elasticsearch
 
-<br />Tools:Python3,Docker,Elasticsearch
+**<br />Tools: Python3,Docker,Elasticsearch**
 
 Graph 1: Overtime number of violation by county  
 ![alt text](https://github.com/karin6543/STA9760_P1/blob/master/Screen%20Shot%202020-03-04%20at%203.46.19%20PM.png "Graph 1")
