@@ -11,17 +11,20 @@ import requests
 
 if __name__ == '__main__':
 
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> fa5e9a6c0cae183e31aab0f19c4bfc7077fc7744
 	APP_KEY=os.environ['APP_KEY']
 
 
 	default_args = {
-		"APP_KEY": None,
-		"PAGE_SIZE": None,
-		"NUM_PAGE": None,
-		"OUTPUT": None,
+		"APP_KEY": APP_KEY,
+		"page_size": None,
+		"num_pages": None,
+		"output": None,
 	}
 
 
@@ -34,14 +37,20 @@ if __name__ == '__main__':
 	if default_args["APP_KEY"]==None:
 		raise Exception('missing APP KEY!!!')
 
-	if default_args["PAGE_SIZE"]==None:
+	if default_args["page_size"]==None:
 		raise Exception('ya got to specify page size!!!')
 
-	if default_args["NUM_PAGE"]==None:
+	if default_args["num_pages"]==None:
 		print('ya didn\'t told me about the Number of Page you want, I am gonna get all of...' )
 
 
-	raw_data=get_data1(default_args["APP_KEY"],default_args["PAGE_SIZE"],default_args["NUM_PAGE"])
+	raw_data=get_data1(default_args["APP_KEY"],default_args["page_size"],default_args["num_pages"])
+
+	with open(default_args["output"],"w") as fw:
+	
+		for item in raw_data:
+			for j in item: 
+				fw.write(str(j)+'\n')
 
 
 
@@ -91,7 +100,13 @@ res = es.get(index="test-index", doc_type='tweet', id=1)
 es.indices.refresh(index="test-index")
 
 # search
-res = es.search(index="test-index", body={"query": {"county": {'NY'}}})
+res = es.search(index="test-index", body={"query": {"county": {}}})
 print("Got %d Hits:" % res['hits']['total'])
 for hit in res['hits']['hits']:
     print(hit["_source"])
+
+
+
+
+
+	
