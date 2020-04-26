@@ -25,6 +25,6 @@ def get_data1(app_key:str,page_size:int,num_pages=None):
 		
 		# for j in range(int(total_len)):
 		# 	list.append(client.get("nc67-uf89",limit=page_size,offset=int(j)*int(page_size))
-	print(type(total_len))
-	# return list
+
+	return list
 	# print(total_len)
