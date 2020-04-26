@@ -11,12 +11,6 @@ import requests
 
 if __name__ == '__main__':
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> fa5e9a6c0cae183e31aab0f19c4bfc7077fc7744
 	APP_KEY=os.environ['APP_KEY']
 
 
